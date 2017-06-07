@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD//EN"
+    "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+
+  <session-factory>
+
+    <!-- JNDI連線池 (Apache Tomcat 連線池DBCP)設定 -->
+    <property name="hibernate.connection.datasource">java:/comp/env/jdbc/TestDB</property>
+
+    <!--SQL方言,以下使用SQLServer -->
+    <property name="hibernate.dialect">org.hibernate.dialect.SQLServerDialect</property>
+
+    <!--是否要顯示實際操作資料庫時的SQL -->
+    <property name="hibernate.show_sql">true</property>
+
+    <!-- Disable the second-level cache -->
+    <property name="hibernate.cache.provider_class">org.hibernate.cache.internal.NoCachingRegionFactory</property>
+
+    <!--交易管理類型, 因為使用spring的tx所以關閉 -->
+    <!--<property name="hibernate.transaction.factory_class">org.hibernate.transaction.JDBCTransactionFactory</property>-->
+
+    <!-- Enable Hibernate's automatic session context management -->
+    <property name="hibernate.current_session_context_class">thread</property>
+
+    <!-- 物件與資料庫表格映射文件，mapping屬性改class，值為類別全名 -->
+    <mapping class="Pets.ExchangeStuff.model.Area" />
+    <mapping class="Pets.ExchangeStuff.model.Cart" />
+    <mapping class="Pets.ExchangeStuff.model.ImageInfo" />
+    <mapping class="Pets.ExchangeStuff.model.Stuff" />
+    <mapping class="Pets.ExchangeStuff.model.StuffDetail" />
+    <mapping class="Pets.BloodBank.model.BloodBank" />
+    <mapping class="Pets.BloodBank.model.BloodDetail" />
+
+  </session-factory>
+
+</hibernate-configuration>

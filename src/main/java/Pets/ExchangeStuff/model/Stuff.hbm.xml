@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="Pets.ExchangeStuff.model.Stuff" table="ExchangStuff" schema="dbo" catalog="EEIT94">
+        <id name="id">
+            <column name="id" sql-type="bigint"/>
+        </id>
+        <property name="areaId">
+            <column name="Area_id" sql-type="bigint"/>
+        </property>
+        <property name="areaName">
+            <column name="Area_name" sql-type="varchar(64)" length="64"/>
+        </property>
+        <property name="providerId">
+            <column name="provider_id" sql-type="bigint"/>
+        </property>
+        <property name="title">
+            <column name="title" sql-type="varchar(200)" length="200"/>
+        </property>
+        <property name="imageId">
+            <column name="image_id" sql-type="bigint" not-null="true"/>
+        </property>
+        <property name="dealLevel">
+            <column name="deal_level" sql-type="int"/>
+        </property>
+        <property name="maxExchangeCount">
+            <column name="max_exchange_count" sql-type="int" not-null="true"/>
+        </property>
+        <property name="publishStatus">
+            <column name="publish_status" sql-type="int"/>
+        </property>
+        <property name="inventoryAmount">
+            <column name="inventory_amount" sql-type="int"/>
+        </property>
+        <property name="startTime">
+            <column name="start_time" sql-type="datetime2"/>
+        </property>
+        <property name="endTime">
+            <column name="end_time" sql-type="datetime2" not-null="true"/>
+        </property>
+        <property name="exchangeMoment">
+            <column name="exchange_moment" sql-type="datetime2" not-null="true"/>
+        </property>
+        <property name="merchantCode">
+            <column name="merchant_code" sql-type="varchar(15)" length="15" not-null="true"/>
+        </property>
+        <property name="createTime">
+            <column name="create_time" sql-type="datetime2"/>
+        </property>
+        <property name="updateTime">
+            <column name="update_time" sql-type="datetime2"/>
+        </property>
+        <property name="categoryId">
+            <column name="category_id" sql-type="bigint"/>
+        </property>
+    </class>
+</hibernate-mapping>

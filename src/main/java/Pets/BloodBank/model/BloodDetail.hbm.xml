@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="Pets.BloodBank.model.BloodDetail" table="BloodDetail" schema="dbo" catalog="EEIT94">
+        <id name="bType">
+            <column name="bType" sql-type="int"/>
+        </id>
+        <property name="typeDetail">
+            <column name="typeDetail" sql-type="varchar(2000)" length="2000" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

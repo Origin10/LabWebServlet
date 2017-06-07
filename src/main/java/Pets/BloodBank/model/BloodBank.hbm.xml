@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="Pets.BloodBank.model.BloodBank" table="BloodBank" schema="dbo" catalog="EEIT94">
+        <id name="id">
+            <column name="id" sql-type="int"/>
+        </id>
+        <property name="pId">
+            <column name="pID" sql-type="int"/>
+        </property>
+        <property name="bType">
+            <column name="bType" sql-type="int" not-null="true"/>
+        </property>
+        <property name="bInfo">
+            <column name="bInfo" sql-type="varchar(2000)" length="2000" not-null="true"/>
+        </property>
+        <property name="bDate">
+            <column name="bDate" sql-type="date" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

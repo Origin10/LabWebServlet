@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="Pets.ExchangeStuff.model.Cart" table="Cart" schema="dbo" catalog="EEIT94">
+        <id name="id">
+            <column name="id" sql-type="bigint"/>
+        </id>
+        <property name="userId">
+            <column name="user_id" sql-type="bigint"/>
+        </property>
+        <property name="dealId">
+            <column name="deal_id" sql-type="bigint"/>
+        </property>
+        <property name="dealSkuId">
+            <column name="deal_sku_id" sql-type="bigint"/>
+        </property>
+        <property name="count">
+            <column name="count" sql-type="int"/>
+        </property>
+        <property name="createTime">
+            <column name="create_time" sql-type="datetime2"/>
+        </property>
+        <property name="updateTime">
+            <column name="update_time" sql-type="datetime2"/>
+        </property>
+    </class>
+</hibernate-mapping>
